@@ -37,15 +37,12 @@ from apscheduler.triggers.cron import CronTrigger
 # ======================== CONFIG AREA =========================
 # =============================================================
 
+from dotenv import load_dotenv
+
+load_dotenv()
 BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "").strip()
 if not BOT_TOKEN:
-    try:
-        from getpass import getpass
-        BOT_TOKEN = getpass("Masukkan token bot Telegram: ").strip()
-    except (EOFError, KeyboardInterrupt):
-        raise SystemExit("\nInput token dibatalkan.")
-    if not BOT_TOKEN:
-        raise SystemExit("Token kosong. Jalankan kembali: python main.py")
+    raise SystemExit("TELEGRAM_BOT_TOKEN belum diatur. Isi di file .env, lalu jalankan kembali: python main.py")
 OWNER_ID = 8548713474  # Same owner ID as info-bot
 LIKE_API_URL = "https://you-like-api.com/like?uid={uid}&server_name=ind"
 LIKE_API_URL_2 = "https://you-like-api.com/like?uid={uid}&server_name=ind"
