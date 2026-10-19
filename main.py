@@ -40,12 +40,12 @@ from apscheduler.triggers.cron import CronTrigger
 BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "").strip()
 if not BOT_TOKEN:
     raise RuntimeError("Set TELEGRAM_BOT_TOKEN in the environment before starting the bot.")
-OWNER_ID = 8294478873  # PASTE YOUR REAL TELEGRAM NUMERIC USER ID
+OWNER_ID = 8548713474  # Same owner ID as info-bot
 LIKE_API_URL = "https://you-like-api.com/like?uid={uid}&server_name=ind"
 LIKE_API_URL_2 = "https://you-like-api.com/like?uid={uid}&server_name=ind"
 BOT_NAME = "USER-NAME"
 SUPPORT_USERNAME = "@SUPPORT_USERNAME"
-OFFICIAL_GROUP = "https://t.me/OFFICIAL_GROUP"
+OFFICIAL_GROUP = "https://t.me/bsnsztools"
 PAYMENT_TEXT = "@PAYMENT_TEXT"
 DEFAULT_AUTOLIKE_TIME = "04:00"  # 24h IST format
 TIMEZONE_NAME = "Asia/Kolkata"
