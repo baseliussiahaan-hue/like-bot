@@ -43,7 +43,7 @@ if not BOT_TOKEN:
         from getpass import getpass
         BOT_TOKEN = getpass("Masukkan token bot Telegram: ").strip()
     except (EOFError, KeyboardInterrupt):
-        raise SystemExit("\\nInput token dibatalkan.")
+        raise SystemExit("\nInput token dibatalkan.")
     if not BOT_TOKEN:
         raise SystemExit("Token kosong. Jalankan kembali: python main.py")
 OWNER_ID = 8548713474  # Same owner ID as info-bot
